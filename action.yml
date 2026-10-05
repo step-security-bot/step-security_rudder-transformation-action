@@ -1,0 +1,49 @@
+name: "RudderStack Transformation Sync"
+description: >
+  Syncs JavaScript and Python transformations and libraries from your repository
+  to a RudderStack workspace. Runs your test suite against live transformation
+  versions before publishing, and uploads diff artifacts on mismatch so failures
+  are easy to diagnose.
+branding:
+  icon: upload-cloud
+  color: blue
+
+inputs:
+  email:
+    description: >
+      Email address of the RudderStack workspace owner. Used together with
+      accessToken for basic authentication against the RudderStack API.
+    required: true
+
+  accessToken:
+    description: >
+      Service access token for the RudderStack workspace. Must have Admin
+      permissions. Generate one from Settings > Access Tokens in the
+      RudderStack dashboard.
+    required: true
+
+  metaPath:
+    description: >
+      Relative path to the metadata JSON file that declares which
+      transformations and libraries to sync, along with their source files,
+      test inputs, and expected outputs.
+    required: true
+
+  serverEndpoint:
+    description: >
+      Base URL of the RudderStack API. Override this when using a self-hosted
+      or GDPR-region deployment. Must not include a trailing slash.
+    required: false
+    default: "https://api.rudderstack.com"
+
+  uploadTestArtifact:
+    description: >
+      Set to 'true' to upload test output files and diff reports as GitHub
+      Actions artifacts after each run. Useful for auditing transformation
+      output changes over time.
+    required: false
+    default: "false"
+
+runs:
+  using: "node24"
+  main: "dist/index.js"

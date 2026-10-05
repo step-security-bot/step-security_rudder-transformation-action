@@ -1,0 +1,31 @@
+{
+  "name": "rudder-transformer-action",
+  "version": "1.1.4",
+  "description": "GitHub Action to validate and sync RudderStack transformations and libraries from your repository to your workspace",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "ncc build --no-cache src/runner.js -o dist",
+    "test": "jest"
+  },
+  "author": "step-security",
+  "license": "MIT",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/testdata/"
+    ]
+  },
+  "dependencies": {
+    "@actions/artifact": "^2.2.1",
+    "@actions/core": "^1.11.1",
+    "axios": "^1.20.0",
+    "deep-object-diff": "^1.1.9",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "jest": "^29.7.0"
+  }
+}

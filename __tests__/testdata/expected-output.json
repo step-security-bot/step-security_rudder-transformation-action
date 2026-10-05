@@ -1,0 +1,18 @@
+[
+  {
+    "amount": 0,
+    "discount": 0,
+    "total": 0,
+    "city": "Berlin",
+    "region": "Brandenburg",
+    "country": "DE"
+  },
+  {
+    "amount": 50,
+    "discount": 10,
+    "total": 40,
+    "city": "unknown",
+    "region": "unknown",
+    "country": "unknown"
+  }
+]
