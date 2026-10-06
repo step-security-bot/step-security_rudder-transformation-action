@@ -1,0 +1,40 @@
+[
+  {
+    "userId": "user-def-789",
+    "anonymousId": "anon-pqr-321",
+    "messageId": "msg-evt-001",
+    "event": "Order Placed",
+    "context": {
+      "ip": "198.51.100.17",
+      "library": {
+        "name": "rudder-sdk-js"
+      },
+      "traits": {
+        "location": {
+          "city": "Berlin",
+          "region": "Brandenburg",
+          "country": "DE"
+        }
+      }
+    },
+    "timestamp": "2025-06-10T08:15:00.000Z"
+  },
+  {
+    "userId": "user-def-789",
+    "anonymousId": "anon-pqr-321",
+    "messageId": "msg-evt-002",
+    "event": "Order Placed",
+    "context": {
+      "ip": "198.51.100.17",
+      "library": {
+        "name": "rudder-sdk-js"
+      },
+      "traits": {}
+    },
+    "properties": {
+      "amount": 50,
+      "discount": 10
+    },
+    "timestamp": "2025-06-10T08:15:30.000Z"
+  }
+]

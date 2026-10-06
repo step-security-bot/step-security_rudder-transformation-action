@@ -1,0 +1,26 @@
+{
+  "libraries": [
+    {
+      "file": "./__tests__/testdata/location.js",
+      "name": "location",
+      "description": "resolves city, region and country from location context",
+      "language": "javascript"
+    },
+    {
+      "file": "./__tests__/testdata/pricing.js",
+      "name": "pricing",
+      "description": "calculates amount, discount and total from order data",
+      "language": "javascript"
+    }
+  ],
+  "transformations": [
+    {
+      "file": "__tests__/testdata/enricher.js",
+      "name": "OrderEnricher",
+      "description": "enriches order events with pricing and location data",
+      "language": "javascript",
+      "test-input-file": "./__tests__/testdata/order-events.json",
+      "expected-output": "./__tests__/testdata/expected-output.json"
+    }
+  ]
+}
